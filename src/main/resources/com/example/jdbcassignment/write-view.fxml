@@ -19,7 +19,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="New Journal Entry">
+            <Label text="Journal Entry">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

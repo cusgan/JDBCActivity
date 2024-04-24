@@ -26,7 +26,7 @@ public class HelloController {
     @FXML
     protected void onSignupClick() {
         String user = txtUsername.getText();
-        String pass = passPassword.getText();
+        String pass = passPassword.getText().hashCode()+"";
         if (!user.equals("") && !pass.equals("")) {
             try (
                 Connection c = MySQLConnection.getConnection(); /*automatically close()*/
@@ -54,7 +54,7 @@ public class HelloController {
     @FXML
     protected void onLoginClick(ActionEvent event) {
         String user = txtUsername.getText();
-        String pass = passPassword.getText();
+        String pass = passPassword.getText().hashCode()+"";
         try (
                 Connection c = MySQLConnection.getConnection();
                 Statement statement = c.createStatement();

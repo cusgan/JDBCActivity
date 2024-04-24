@@ -27,27 +27,27 @@
             <Button fx:id="btnNewEntry" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNewEntryClick" prefHeight="25.0" prefWidth="136.0" text="Write a New Entry" GridPane.columnIndex="2" />
             <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#onLogoutClick" text="Log Out" GridPane.columnIndex="4" GridPane.halignment="RIGHT" />
             <Label fx:id="txtEntryCount" prefHeight="17.0" prefWidth="71.0" text="## Entries" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="Delete Account" GridPane.columnIndex="3" />
+            <Button fx:id="btnDeleteAcc" mnemonicParsing="false" onAction="#onDeleteAccClick" text="Delete Account" GridPane.columnIndex="3" />
          </children>
          <VBox.margin>
             <Insets bottom="15.0" left="20.0" right="20.0" top="25.0" />
          </VBox.margin>
       </GridPane>
-      <ScrollPane prefHeight="413.0" prefWidth="640.0">
+      <ScrollPane fx:id="spEntries" hbarPolicy="NEVER" prefHeight="413.0" prefWidth="640.0">
          <content>
-            <VBox prefWidth="580.0">
+            <VBox fx:id="vbTembplate" prefWidth="580.0">
                <children>
-                  <Label text="Date Posted" />
-                  <Label text="Entry Title">
+                  <Label fx:id="txtDate" text="Date Posted" />
+                  <Label fx:id="txtTitle" text="Entry Title">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label prefWidth="580.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                  <Label fx:id="txtContent" prefWidth="580.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
                   <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="580.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Edit Entry" />
-                        <Button mnemonicParsing="false" text="Delete Entry" />
+                        <Button fx:id="btnEdit" mnemonicParsing="false" text="Edit Entry" />
+                        <Button fx:id="btnDeleteEntry" mnemonicParsing="false" text="Delete Entry" />
                      </children>
                   </HBox>
                </children></VBox>
