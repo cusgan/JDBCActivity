@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jdbcassignment.LoginController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="235.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="txtJournal" strokeType="OUTSIDE" strokeWidth="0.0" text="Username's Journal">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnNewEntry" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNewEntryClick" prefHeight="25.0" prefWidth="136.0" text="Write a New Entry" GridPane.columnIndex="2" />
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#onLogoutClick" text="Log Out" GridPane.columnIndex="3" GridPane.halignment="RIGHT" />
+            <Label fx:id="txtEntryCount" text="## Journal Entries" GridPane.columnIndex="1" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" left="20.0" right="20.0" top="25.0" />
+         </VBox.margin>
+      </GridPane>
+      <ScrollPane prefHeight="413.0" prefWidth="640.0">
+         <content>
+            <VBox prefWidth="580.0">
+               <children>
+                  <Label text="Date Posted" />
+                  <Label text="Entry Title">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label prefWidth="580.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." wrapText="true" />
+                  <Button mnemonicParsing="false" text="Edit Entry">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Button>
+               </children></VBox>
+         </content>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+         </padding>
+      </ScrollPane>
+   </children>
+</VBox>
