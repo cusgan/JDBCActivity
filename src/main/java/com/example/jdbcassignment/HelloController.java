@@ -59,6 +59,10 @@ public class HelloController {
                 Connection c = MySQLConnection.getConnection();
                 Statement statement = c.createStatement();
         ) {
+            if (user.equals("") || pass.equals("")) {
+                txtMessage.setTextFill(Color.RED);
+                txtMessage.setText("Login unsuccessful.");
+            }
             String query = "SELECT * FROM users WHERE username = '" + user + "';";
             ResultSet res = statement.executeQuery(query);
             if (res.next()) {

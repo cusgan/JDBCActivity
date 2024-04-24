@@ -21,8 +21,8 @@ public class LoginController {
     private Label txtEntryCount;
 
     public void loadPage() {
-        txtJournal.setText( LoggedInUser.username + "'s Journal");
-        txtEntryCount.setText( LoggedInUser.entrycount + " Journal Entries");
+        txtJournal.setText(LoggedInUser.username + "'s Journal");
+        txtEntryCount.setText(LoggedInUser.entrycount + " Entries");
     }
 
     @FXML
